@@ -1,0 +1,181 @@
+Sub color()
+
+Dim i, j, k, l, m, n, o, p, q, r, s As Long
+i = 3
+j = 11
+k = 12
+l = 13
+m = 14
+n = 15
+o = 16
+p = 17
+q = 18
+r = 19
+s = 20
+
+For i = 3 To 48
+
+'1列目
+For j = 11 To 11
+    If Cells(i, j) = "" Or "0" Then
+        Cells(i, j).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, j) And Cells(i, 3) + Cells(i, 5) > Cells(i, j) Then
+        Cells(i, j).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, j) Then
+        Cells(i, j).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, j) And 0 < Cells(i, 9) Then
+        Cells(i, j).Interior.ColorIndex = 36 '黄
+    ElseIf Cells(i, 9) = 0 Then
+        Cells(i, j).Interior.ColorIndex = 22 '赤
+    End If
+Next j
+
+'2列目
+For k = 12 To 12
+    If Cells(i, k) = "" Or "0" Then
+        Cells(i, k).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, k) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, j) Then
+        Cells(i, k).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, k) Then
+        Cells(i, k).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, k) And 0 < Cells(i, 9) - Cells(i, 11) Then
+        Cells(i, k).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, k).Interior.ColorIndex = 22 '赤
+    End If
+Next k
+
+'3列目
+For l = 13 To 13
+    If Cells(i, l) = "" Or "0" Then
+        Cells(i, l).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, l) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, l) Then
+        Cells(i, l).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, l) Then
+        Cells(i, l).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, l) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12)) Then
+        Cells(i, l).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, l).Interior.ColorIndex = 22 '赤
+    End If
+Next l
+
+'4列目
+For m = 14 To 14
+    If Cells(i, m) = "" Or "0" Then
+        Cells(i, m).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, m) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, m) Then
+        Cells(i, m).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, m) Then
+        Cells(i, m).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, m) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13)) Then
+        Cells(i, m).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, m).Interior.ColorIndex = 22 '赤
+    End If
+Next m
+
+'5列目
+For n = 15 To 15
+    If Cells(i, n) = "" Or "0" Then
+        Cells(i, n).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, n) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, n) Then
+        Cells(i, n).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, n) Then
+        Cells(i, n).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, n) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14)) Then
+        Cells(i, n).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, n).Interior.ColorIndex = 22 '赤
+    End If
+Next n
+
+'6列目
+For o = 16 To 16
+    If Cells(i, o) = "" Or "0" Then
+        Cells(i, o).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, o) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, o) Then
+        Cells(i, o).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, o) Then
+        Cells(i, o).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, o) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15)) Then
+        Cells(i, o).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, o).Interior.ColorIndex = 22 '赤
+    End If
+Next o
+
+'7列目
+For p = 17 To 17
+    If Cells(i, p) = "" Or "0" Then
+        Cells(i, p).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, p) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, p) Then
+        Cells(i, p).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, p) Then
+        Cells(i, p).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, p) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16)) Then
+        Cells(i, p).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, p).Interior.ColorIndex = 22 '赤
+    End If
+Next p
+
+'8列目
+For q = 18 To 18
+    If Cells(i, q) = "" Or "0" Then
+        Cells(i, q).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, q) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, q) Then
+        Cells(i, q).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, q) Then
+        Cells(i, q).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, q) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17)) Then
+        Cells(i, q).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, q).Interior.ColorIndex = 22 '赤
+    End If
+Next q
+
+'9列目
+For r = 19 To 19
+    If Cells(i, r) = "" Or "0" Then
+        Cells(i, r).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, r) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, r) Then
+        Cells(i, r).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, r) Then
+        Cells(i, r).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, r) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18)) Then
+        Cells(i, r).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, r).Interior.ColorIndex = 22 '赤
+    End If
+Next r
+
+'10列目
+For s = 20 To 20
+    If Cells(i, s) = "" Or "0" Then
+        Cells(i, s).Interior.ColorIndex = 0 '透明
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, 19) + Cells(i, s) And Cells(i, 3) + Cells(i, 5) > Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, 19) + Cells(i, s) Then
+        Cells(i, s).Interior.ColorIndex = 43 '緑
+    ElseIf Cells(i, 9) >= Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, 19) + Cells(i, s) Then
+        Cells(i, s).Interior.ColorIndex = 37 '青
+    ElseIf Cells(i, 9) < Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, 19) + Cells(i, s) And 0 < Cells(i, 9) - (Cells(i, 11) + Cells(i, 12) + Cells(i, 13) + Cells(i, 14) + Cells(i, 15) + Cells(i, 16) + Cells(i, 17) + Cells(i, 18) + Cells(i, 19)) Then
+        Cells(i, s).Interior.ColorIndex = 36 '黄
+    Else
+        Cells(i, s).Interior.ColorIndex = 22 '赤
+    End If
+Next s
+
+
+Next i
+
+'日付行を塗りつぶしなしにする処理
+For j = 11 To 20
+Cells(10, j).Interior.ColorIndex = 0
+Cells(18, j).Interior.ColorIndex = 0
+Cells(27, j).Interior.ColorIndex = 0
+Cells(35, j).Interior.ColorIndex = 0
+Cells(43, j).Interior.ColorIndex = 0
+Next j
+
+
+End Sub
